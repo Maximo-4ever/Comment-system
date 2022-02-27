@@ -35,15 +35,13 @@ const paintComment = (comment) => {
   //template
   const templateComment = document.getElementById("templateComment").content;
   const templateClone = templateComment.cloneNode(true);
-  const templateReply = templateComment .cloneNode(true).querySelector(".replyCommentContainer");
   // Comment content
   templateClone.querySelector(".main-comment").dataset.uid = comment.uid;
   templateClone.querySelector(".comment__text").textContent = comment.message;
   templateClone.querySelector(".aside__count").textContent = comment.likes;
   // Si es un comentario de respuesta:
   if (parentComment) {
-    templateReply.appendChild(templateClone);
-    parentComment.appendChild(templateReply);
+    parentComment.querySelector(".replyCommentContainer").appendChild(templateClone);
     parentComment = false;
   } else {
     commentsContainer.appendChild(templateClone);
