@@ -8,6 +8,128 @@ html {
   margin: 0;
   box-sizing: inherit;
 }
+:root {
+  --bg-primary: #5257bb;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f6fa;
+}
+#main {
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 37px auto;
+  row-gap: 30px;
+}
+.form,
+.comment {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+  border-radius: 10px;
+  gap: 15px;
+  box-shadow: 5px 5px 22px rgba(47, 52, 133, 0.07);
+}
+.form__img {
+  height: 50px;
+  border-radius: 50%;
+}
+.form__input {
+  font-size: 15px;
+  padding: 8px 15px;
+  border: 1px solid #f5f6fa;
+  color: #777783;
+  resize: none;
+}
+.form__btn {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 11px 28px;
+  background-color: var(--bg-primary);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+#comments-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.comment__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 10px;
+  row-gap: 12px;
+  padding: 8px 13px;
+}
+.comment__aside span:not(.aside__count) {
+  cursor: pointer;
+  font-weight: 800;
+  color: #c6c7d2;
+  transition: 0.4s;
+}
+.aside__count {
+  color: var(--bg-primary);
+  font-weight: 800;
+  transition: 0.4s;
+}
+.comment__aside span:hover {
+  color: var(--bg-primary);
+}
+.aside__count {
+  color: var(--bg-primary);
+}
+.comment__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.comment__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.comment__header div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.comment__header img {
+  height: 40px;
+}
+.comment__header h6 {
+  font-size: 17px;
+}
+.comment__header .reply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--bg-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+.reply img {
+  height: 18px;
+}
+.comment__text {
+  font-size: 16px;
+  color: #6f7087;
+  line-height: 20px;
 }
