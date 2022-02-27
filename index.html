@@ -30,7 +30,31 @@
       </form>
 
       <div id="comments-container">
-        <article class="comment">
+      </div>
+    </main>
+
+    <!-- Templates -->
+    <template id="templateForm">
+      <div class="form">
+        <img
+          src="https://thispersondoesnotexist.com/image"
+          alt="thispersondoesnotexist"
+          class="form__img"
+        />
+        <textarea
+          type="text"
+          class="form__input"
+          cols="55"
+          rows="4"
+          placeholder="Add a comment"
+        ></textarea>
+        <button class="form__btn form__btn--reply">Send</button>
+      </div>
+    </template>
+
+    <template id="templateComment">
+      <article class="main-comment">
+        <div class="comment">
           <aside class="comment__aside">
             <span class="aside__like"> + </span>
             <span class="aside__count">5</span>
@@ -47,7 +71,11 @@
                 <h6>Anonymous</h6>
               </div>
               <span class="reply">
-                <img src="./assets/reply-solid.svg" alt="Reply icon" />
+                <img
+                  src="./assets/reply-solid.svg"
+                  alt="Reply icon"
+                  class="reply__img"
+                />
                 Reply
               </span>
             </header>
@@ -58,48 +86,12 @@
               minima. Animi ducimus vero eum iusto!
             </p>
           </div>
-        </article>
-
-        <!-- Template -->
-        <template id="template">
-          <article class="comment">
-            <aside class="comment__aside">
-              <span class="aside__like"> + </span>
-              <span class="aside__count">5</span>
-              <span class="aside__dislike"> - </span>
-            </aside>
-            <div class="comment__content">
-              <header class="comment__header">
-                <div>
-                  <img
-                    src="https://thispersondoesnotexist.com/image"
-                    alt="thispersondoesnotexist"
-                    class="form__img"
-                  />
-                  <h6>Anonymous</h6>
-                </div>
-                <span class="reply">
-                  <img
-                    src="./assets/reply-solid.svg"
-                    alt="Reply icon"
-                    class="reply__img"
-                  />
-                  Reply
-                </span>
-              </header>
-              <p class="comment__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates modi nulla aspernatur ratione, dignissimos fuga,
-                itaque voluptatem fugit facilis beatae sapiente eligendi alias
-                dolorum minima. Animi ducimus vero eum iusto!
-              </p>
-            </div>
-          </article>
-        </template>
-        <!-- /Template -->
-      </div>
-    </main>
-
+        </div>
+        <div class="replyCommentContainer"></div>
+      </article>
+    </template>
+    
+    
     <script src="./app.js"></script>
   </body>
 </html>
