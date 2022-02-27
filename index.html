@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comment system</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/c622ee6a95.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <main id="main">
@@ -23,8 +22,9 @@
           type="text"
           class="form__input"
           cols="55"
-          rows="5"
+          rows="4"
           placeholder="Add a comment"
+          maxlength="500"
         ></textarea>
         <button class="form__btn">Send</button>
       </form>
@@ -45,8 +45,9 @@
           type="text"
           class="form__input"
           cols="55"
-          rows="4"
+          rows="3"
           placeholder="Add a comment"
+          maxlength="500"
         ></textarea>
         <button class="form__btn form__btn--reply">Send</button>
       </div>
